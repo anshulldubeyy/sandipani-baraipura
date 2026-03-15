@@ -1186,160 +1186,41 @@
       आधार कार्ड, जन्म प्रमाण पत्र, पिछली कक्षा की मार्कशीट, पासपोर्ट साइज फोटो, जाति प्रमाण पत्र, समग्र आई डी, टी सी
     </div>
 
-    <div class="form-card">
-      <h3 style="color: var(--blue-deep); font-size: 1.1rem; margin-bottom: 24px; text-align: center;">📝 प्रवेश आवेदन पत्र - 2026-27</h3>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>विद्यार्थी का नाम (हिंदी में) <span class="required">*</span></label>
-          <input type="text" id="student-name" placeholder="पूरा नाम लिखें">
-        </div>
-        <div class="form-group">
-          <label>विद्यार्थी का नाम (English में) <span class="required">*</span></label>
-          <input type="text" id="student-name-en" placeholder="Full Name">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>जन्म तिथि <span class="required">*</span></label>
-          <input type="date" id="dob">
-        </div>
-        <div class="form-group">
-          <label>लिंग <span class="required">*</span></label>
-          <select id="gender">
-            <option value="">— चुनें —</option>
-            <option>बालक</option>
-            <option>बालिका</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>प्रवेश चाही कक्षा <span class="required">*</span></label>
-          <select id="class">
-            <option value="">— कक्षा चुनें —</option>
-            <option>कक्षा 1</option><option>कक्षा 9</option>
-            <option>कक्षा 11</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>जाति वर्ग <span class="required">*</span></label>
-          <select id="caste">
-            <option value="">— चुनें —</option>
-            <option>सामान्य</option><option>OBC</option><option>SC</option><option>ST</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>पिता का नाम <span class="required">*</span></label>
-          <input type="text" id="father-name" placeholder="पिता का पूरा नाम">
-        </div>
-        <div class="form-group">
-          <label>माता का नाम <span class="required">*</span></label>
-          <input type="text" id="mother-name" placeholder="माता का पूरा नाम">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>मोबाइल नंबर <span class="required">*</span></label>
-          <input type="tel" id="mobile" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10">
-        </div>
-        <div class="form-group">
-          <label>आधार नंबर<span class="required">*</span></label>
-          <input type="text" id="aadhar" placeholder="12 अंकों का आधार नंबर" maxlength="12">
-        </div>
-        <div class="form-group">
-          <label>समग्र आई डी<span class="required">*</span></label>
-          <input type="text" id="aadhar" placeholder="9 अंकों की समग्र आई डी" maxlength="9">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>पूरा पता <span class="required">*</span></label>
-        <textarea id="address" rows="2" placeholder="मकान नं., गली, मोहल्ला, ग्राम/वार्ड, पिनकोड"></textarea>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>पिछली कक्षा में प्राप्तांक (%)</label>
-          <input type="number" id="prev-marks" placeholder="जैसे: 85" min="0" max="100">
-        </div>
-        <div class="form-group">
-          <label>पिछले विद्यालय का नाम</label>
-          <input type="text" id="prev-school" placeholder="पिछले स्कूल का नाम">
-        </div>
-      </div>
-<div class="form-group">
-  <label>पासपोर्ट साइज फोटो <span class="required">*</span></label>
-  <input type="file" id="photo" accept="image/*" onchange="previewPhoto(this)">
-  <div id="photo-preview" style="display:none; margin-top:10px;">
-    <img id="preview-img" style="width:100px; height:120px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
-    <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">✅ फोटो selected</p>
-  </div>
-  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
-    📌 केवल JPG/PNG | अधिकतम 2MB
+   <div class="form-card" style="text-align:center; padding: 50px 36px;">
+  <div style="font-size: 4rem; margin-bottom: 16px;">📋</div>
+  <h3 style="color: var(--blue-deep); font-size: 1.3rem; margin-bottom: 12px;">
+    ऑनलाइन प्रवेश फॉर्म 2026-27
+  </h3>
+  <p style="color: var(--text-light); font-size: 0.92rem; margin-bottom: 30px; line-height: 1.7;">
+    नीचे दिए button पर click करें और Google Form में सभी जानकारी भरें।<br>
+    फोटो एवं दस्तावेज भी upload कर सकते हैं।
   </p>
-</div>
-      <div class="form-group">
-  <label>आधार कार्ड (Upload) <span class="required">*</span></label>
-  <input type="file" id="aadhar-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'aadhar-preview', 'aadhar-preview-img')">
-  <div id="aadhar-preview" style="display:none; margin-top:10px;">
-    <img id="aadhar-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
-    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ आधार कार्ड selected</p>
-  </div>
-  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
-    📌 JPG/PNG/PDF | अधिकतम 2MB
-  </p>
-</div>
-      <div class="form-group">
-  <label>समग्र आईडी (Upload) <span class="required">*</span></label>
-  <input type="file" id="samagra-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'samagra-preview', 'samagra-preview-img')">
-  <div id="samagra-preview" style="display:none; margin-top:10px;">
-    <img id="samagra-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
-    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ समग्र आईडी selected</p>
-  </div>
-  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
-    📌 JPG/PNG/PDF | अधिकतम 2MB
-  </p>
-</div>
-      <div class="form-group">
-  <label>पिछली कक्षा की मार्कशीट (Upload) <span class="required">*</span></label>
-  <input type="file" id="marksheet-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'marksheet-preview', 'marksheet-preview-img')">
-  <div id="marksheet-preview" style="display:none; margin-top:10px;">
-    <img id="marksheet-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
-    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ मार्कशीट selected</p>
-  </div>
-  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
-    📌 JPG/PNG/PDF | अधिकतम 2MB
-  </p>
-</div>
-      
-      <div class="form-group">
-        <label>कोई विशेष जानकारी / टिप्पणी</label>
-        <textarea id="remarks" rows="2" placeholder="कोई भी अन्य जानकारी..."></textarea>
-      </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;">
-  <button class="form-submit" onclick="submitAdmission()">
-    📤 फॉर्म जमा करें
-  </button>
   <a href="https://forms.gle/6FJDzcH5NjGF6SAS8"
     target="_blank"
-    style="background: linear-gradient(135deg, #16a34a, #15803d);
-    color: white; border: none; padding: 14px;
-    border-radius: 8px; font-size: 1rem; font-weight: 700;
-    cursor: pointer; width: 100%; text-align: center;
-    text-decoration: none; display: flex;
-    align-items: center; justify-content: center;">
-    📋 Google Form से भरें
+    style="background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+    color: white; padding: 16px 40px; border-radius: 10px;
+    font-size: 1.1rem; font-weight: 700; text-decoration: none;
+    display: inline-block; transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(30,77,183,0.4);">
+    📝 प्रवेश फॉर्म भरें
   </a>
-</div>
-    </div>
+
+  <div style="margin-top: 20px; font-size: 0.82rem; color: var(--text-light);">
+    🔒 Google द्वारा सुरक्षित | 📱 Mobile पर भी काम करेगा
+  </div>
+
+  <div style="margin-top: 30px; background: var(--blue-sky);
+    border-radius: 10px; padding: 16px; text-align: left;">
+    <strong style="color: var(--blue-deep);">⚠️ दस्तावेज तैयार रखें:</strong><br>
+    <span style="font-size: 0.85rem; color: var(--text-mid); line-height: 2;">
+      📸 पासपोर्ट फोटो &nbsp;|&nbsp;
+      🪪 आधार कार्ड &nbsp;|&nbsp;
+      📄 मार्कशीट &nbsp;|&nbsp;
+      🆔 समग्र आईडी &nbsp;|&nbsp;
+      📜 जाति प्रमाण पत्र &nbsp;|&nbsp;
+      📋 TC
+    </span>
   </div>
 </div>
 
