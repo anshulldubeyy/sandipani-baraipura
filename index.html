@@ -1714,12 +1714,41 @@
       showModal('⚠️', 'गलत मोबाइल नंबर', 'कृपया 10 अंकों का सही मोबाइल नंबर डालें।');
       return;
     }
-    // यहाँ Google Form / backend API call होगा
-    showModal('🎉', 'प्रवेश फॉर्म जमा हो गया!', `${name} का प्रवेश फॉर्म सफलतापूर्वक जमा हो गया है। हम जल्द ही ${mobile} पर संपर्क करेंगे।`);
-    // Form reset
-    document.querySelectorAll('#page-admission input, #page-admission select, #page-admission textarea').forEach(el => el.value = '');
-  }
 
+    // Formspree को data भेजें
+    const formData = {
+      'विद्यार्थी का नाम': name,
+      'पिता का नाम': father,
+      'मोबाइल': mobile,
+      'कक्षा': cls,
+      'माता का नाम': document.getElementById('mother-name').value,
+      'जन्म तिथि': document.getElementById('dob').value,
+      'लिंग': document.getElementById('gender').value,
+      'जाति': document.getElementById('caste').value,
+      'पता': document.getElementById('address').value,
+      'पिछले अंक': document.getElementById('prev-marks').value,
+      'पिछला विद्यालय': document.getElementById('prev-school').value,
+      'टिप्पणी': document.getElementById('remarks').value,
+    };
+
+    fetch('https://formspree.io/f/mlgpwnvl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      if (response.ok) {
+        showModal('🎉', 'प्रवेश फॉर्म जमा हो गया!',
+        `${name} का फॉर्म सफलतापूर्वक जमा हो गया है। हम जल्द ही ${mobile} पर संपर्क करेंगे।`);
+        document.querySelectorAll('#page-admission input, #page-admission select, #page-admission textarea').forEach(el => el.value = '');
+      } else {
+        showModal('❌', 'कुछ गड़बड़ हुई', 'कृपया दोबारा try करें।');
+      }
+    })
+    .catch(() => {
+      showModal('❌', 'Internet Error', 'कृपया internet connection check करें।');
+    });
+  }
   // Fee Payment Submit
   function submitFeePayment() {
     const name = document.getElementById('fee-name').value.trim();
