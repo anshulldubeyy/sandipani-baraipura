@@ -1237,6 +1237,40 @@
   </p>
 </div>
       <div class="form-group">
+  <label>आधार कार्ड (Upload) <span class="required">*</span></label>
+  <input type="file" id="aadhar-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'aadhar-preview', 'aadhar-preview-img')">
+  <div id="aadhar-preview" style="display:none; margin-top:10px;">
+    <img id="aadhar-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
+    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ आधार कार्ड selected</p>
+  </div>
+  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
+    📌 JPG/PNG/PDF | अधिकतम 2MB
+  </p>
+</div>
+      <div class="form-group">
+  <label>समग्र आईडी (Upload) <span class="required">*</span></label>
+  <input type="file" id="samagra-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'samagra-preview', 'samagra-preview-img')">
+  <div id="samagra-preview" style="display:none; margin-top:10px;">
+    <img id="samagra-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
+    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ समग्र आईडी selected</p>
+  </div>
+  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
+    📌 JPG/PNG/PDF | अधिकतम 2MB
+  </p>
+</div>
+      <div class="form-group">
+  <label>पिछली कक्षा की मार्कशीट (Upload) <span class="required">*</span></label>
+  <input type="file" id="marksheet-doc" accept="image/*,.pdf" onchange="previewDoc(this, 'marksheet-preview', 'marksheet-preview-img')">
+  <div id="marksheet-preview" style="display:none; margin-top:10px;">
+    <img id="marksheet-preview-img" style="width:160px; height:100px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-mid);">
+    <p style="font-size:0.75rem; color:green; margin-top:4px;">✅ मार्कशीट selected</p>
+  </div>
+  <p style="font-size:0.75rem; color:var(--text-light); margin-top:4px;">
+    📌 JPG/PNG/PDF | अधिकतम 2MB
+  </p>
+</div>
+      
+      <div class="form-group">
         <label>कोई विशेष जानकारी / टिप्पणी</label>
         <textarea id="remarks" rows="2" placeholder="कोई भी अन्य जानकारी..."></textarea>
       </div>
