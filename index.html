@@ -2184,34 +2184,59 @@ function checkResult() {
   }
 }
 </script>
-    <script>
+   <script>
 const students = [
   {
     roll: "9266210370101",
     dob: "2009-12-19",
-    pdf: "https://drive.google.com/file/d/1WHalgwlBOEN11BKx6A-guvHrPB9cD_O-/view?usp=sharing"
+    pdf: "https://drive.google.com/file/d/1WHalgwlBOEN11BKx6A-guvHrPB9cD_O-/preview"
   },
   {
     roll: "9266210370102",
     dob: "2011-05-05",
-    pdf: "https://drive.google.com/file/d/1xppaSbdVjlk-j/preview"
+    pdf: "https://drive.google.com/file/d/1xppaSbdVjlk-jRBg0gYBwRuJYYJtV7mp/preview"
   },
   {
     roll: "9266210370103",
     dob: "2010-06-07",
-    pdf: "https://drive.google.com/file/d/1zf38hq6F45W73/preview"
+    pdf: "https://drive.google.com/file/d/1zf38hq6F45W73XRufjlTHIeRJyzJiuUj/preview"
   },
   {
     roll: "9266210370104",
     dob: "2010-12-10",
-    pdf: "https://drive.google.com/file/d/1WHaT1yrnxaLcy/preview"
+    pdf: "https://drive.google.com/file/d/1WHaT1yrnxaLcyfJKJkZkyN2KlERYlGTB/preview"
   },
   {
     roll: "9266210370105",
     dob: "2010-05-06",
-    pdf: "https://drive.google.com/file/d/1RxCy4MOsaSMQj/preview"
+    pdf: "https://drive.google.com/file/d/1RxCy4MOsaSMQjjSMFgwdoKLsb2DmDslC/preview"
   }
 ];
+
+function checkResult() {
+  const roll = document.getElementById("roll").value.trim();
+  const dob = document.getElementById("dob").value;
+
+  const student = students.find(s => s.roll === roll && s.dob === dob);
+
+  if (student) {
+    document.getElementById("resultBox").innerHTML = `
+      <div class="info-box">
+        ✅ Result मिल गया!
+        <br><br>
+        <a href="${student.pdf}" target="_blank" class="btn-primary">📄 Marksheet देखें</a>
+        <br><br>
+        <a href="${student.pdf}" download class="btn-secondary">⬇️ Download करें</a>
+      </div>
+    `;
+  } else {
+    document.getElementById("resultBox").innerHTML = `
+      <div class="info-box" style="border-left-color:red;">
+        ❌ Result नहीं मिला! सही जानकारी डालें।
+      </div>
+    `;
+  }
+}
 </script>
 </body>
 </html>
